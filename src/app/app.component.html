@@ -1,0 +1,27 @@
+<div class="m-5 mt-5">
+
+  <div class="alert alert-primary">
+    <form>
+      <h3 class="form-group">Add a link</h3>
+      <div class="form-group">
+        <label for="title" class="font-weight-bold">Title:</label>
+        <input name="title" #newTitle class="form-control">
+      </div>
+
+      <div class="form-group">
+        <label for="link" class="font-weight-bold">Link:</label>
+        <input name="link" #newLink class="form-control">
+      </div>
+
+      <div class="text-right">
+        <button (click)="addArticle(newTitle , newLink )" class="btn btn-success">
+          Submit link
+        </button>
+      </div>
+    </form>
+
+  </div>
+  <hr>
+  <app-article *ngFor="let item of articlesSorted()" [article]="item"></app-article>
+
+</div>

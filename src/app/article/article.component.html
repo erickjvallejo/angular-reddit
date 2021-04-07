@@ -1,0 +1,41 @@
+<div class="row">
+  <div class="col-sm-6">
+    <div class="card alert alert-secondary">
+      <div class="card-body text-center">
+        <h2 class="card-title">
+          {{article.votes}}
+        </h2>
+        <p class="card-text font-weight-bold">
+          Points
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="col-sm-6">
+
+    <div class="card alert alert-light">
+
+      <div class="h3 text-primary">
+        <a href="{{article.link}}">
+          {{article.title}}
+        </a>
+      </div>
+
+      <!-- right here -->
+      <div class="">({{ article.domain() }})</div>
+
+      <div class="form-group row">
+        <a href (click)="voteUp()" class="col-sm-4">
+          <i class="fas fa-arrow-circle-up">Upvote</i>
+        </a>
+        <a href (click)="voteDown()" class="col-sm-4">
+          <i class="fas fa-arrow-circle-down">Downvote</i>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+</div>
